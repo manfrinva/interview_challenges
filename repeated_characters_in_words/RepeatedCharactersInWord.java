@@ -9,10 +9,10 @@ import java.util.TreeMap;
 //Algorithm that shows the repeated characters in a sentence or words
 public class RepeatedCharactersInWord{
 	public static void main (String[] args) throws java.lang.Exception{
-	    //is possible change this variable for any kind of words or phrase.
+		//is possible change this variable for any kind of words or phrase.
 		String s = "Interview";
-        Map<String, Integer> map = contar(s.replace(" ", "").toLowerCase());
-        Imprimir(map);
+        	Map<String, Integer> map = contar(s.replace(" ", "").toLowerCase());
+        	Imprimir(map);
 	}
 	
 	public static Map<String, Integer> contar(String frase){        
