@@ -1,9 +1,3 @@
-/*
-This algorithm read all characters of a phrase or word.
-Counts all characters and displays each one and the number of times it appears.
-Example: "Interview". The output will be {i=2; n=1; t=2; r=1; v=1; s=1; a=1}
-*/
-
 import java.util.*;
 import java.lang.*;
 import java.io.*;
@@ -12,6 +6,7 @@ import java.util.Map;
 import java.util.Map;
 import java.util.TreeMap;
  
+//Algorithm that shows the repeated characters in a sentence or words
 public class RepeatedCharactersInWord{
 	public static void main (String[] args) throws java.lang.Exception{
 	    //is possible change this variable for any kind of words or phrase.
@@ -35,8 +30,23 @@ public class RepeatedCharactersInWord{
     }
  
     public static void Imprimir(Map<String, Integer> items){       
+    	//A variable to show in which you choose the minimum number of times the character appears in order to show it
+        int numberOfTimes = 2;
+        
+        //A variable count the lines showed
+        int lines = 0;
+        
+	    //for to show the chars;
         for(Map.Entry<String, Integer> a : items.entrySet()){
-            System.out.println(a.getKey() + ": " +  a.getValue());
-        }    
+            
+            //if to validate the minimun number
+            if(a.getValue()>=numberOfTimes){
+                System.out.println(a.getKey() + ": " +  a.getValue());
+                lines++;//if showed line own +1
+            }
+        }
+        if (lines==0){
+            System.out.println("There are no repeating characters");
+        }   
     } 
 }
