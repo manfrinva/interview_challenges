@@ -3,7 +3,6 @@ import java.lang.*;
 import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Map;
 import java.util.TreeMap;
  
 //Algorithm that shows the repeated characters in a sentence or words
